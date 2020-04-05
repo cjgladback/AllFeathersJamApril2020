@@ -21,5 +21,11 @@ You don't know, and have a few ways to say it.
 You turn up the room's lights. She laughs, covering her eyes.
 "Yeah, yeah. Cut that out."
 You oblige.
-"I mean, do you think you can patch into net directly? Maybe there's been a bulletin or an estimated resolution time."
-Electronic ports in the room get highlighted.
+"I mean, do you think you can patch into the net directly? Maybe there's been a bulletin or an estimated resolution time. Something."
+Electronic ports in the room get highlighted?
+
+Outer wall port only communicates exit is not permitted until room air scan returns no foreign particles; current scan completion estimated in 20 minutes.
+Inner wall port (to neighboring room, with curtain closed on their side) states occupants have not yet woken from cryo sleep. Inter-room communication requires confirmation from both sides.
+Get info from desk port that confirms solar flares have caused long distance comms outages. To preserve intranet stability, you need security clearance to use the settlement-wide comms.
+After checking two ports, power in room goes out.
+"Did you do that?"
