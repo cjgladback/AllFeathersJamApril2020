@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager ins;
+    public Node startingNode;
 
     [HideInInspector]
     public Node currentNode;
@@ -17,11 +18,21 @@ public class GameManager : MonoBehaviour
         ins = this;
     }
 
+    private void Start()
+    {
+        startingNode.Arrive();
+    }
+
     private void Update()
     {
+        //back up from prop
         if (Input.GetMouseButtonDown(1) && currentNode.GetComponent<Prop>() != null)
         {
             currentNode.GetComponent<Prop>().loc.Arrive();
+        } //back up from location
+        else if (Input.GetMouseButtonDown(1) && currentNode.GetComponent<Location>() != null)
+        {
+            currentNode.GetComponent<Location>().way.Arrive();
         }
     }
 
