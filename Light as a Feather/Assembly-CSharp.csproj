@@ -72,6 +72,7 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRig.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Interactions\Interactible.cs" />
     <Compile Include="Assets\Scripts\Nodes\Location.cs" />
     <Compile Include="Assets\Scripts\Nodes\Node.cs" />
     <Compile Include="Assets\Scripts\Nodes\Prop.cs" />
@@ -691,6 +692,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Ink-Libraries.csproj">
+      <Project>{E9D52419-17B6-8CEF-3582-BAFAAB7197A8}</Project>
+      <Name>Ink-Libraries</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

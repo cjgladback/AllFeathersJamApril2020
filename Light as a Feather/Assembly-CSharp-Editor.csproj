@@ -718,6 +718,14 @@
       <Project>{7C5F48C3-8AE2-3353-C905-C57BCEB08542}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{A27E01F3-796E-9127-B576-4E97B6B23DBB}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="Ink-Libraries.csproj">
+      <Project>{E9D52419-17B6-8CEF-3582-BAFAAB7197A8}</Project>
+      <Name>Ink-Libraries</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
