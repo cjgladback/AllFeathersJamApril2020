@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
 using Ink.Runtime;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +17,15 @@ public class GameManager : MonoBehaviour
     public Node currentNode;
     
     public CameraRig rig;
+
+    //vars relating to lighting changes
+    public float normalLight;
+    public float lowLight;
+    public float highLight;
+
+    public GameObject[] inLights;
+    public Light lt;
+    public float brightness;
 
     //look up singleton in future to improve this bad one
     private void Awake()
@@ -33,6 +45,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //back up from prop
+
         if (Input.GetMouseButtonDown(1) && currentNode.GetComponent<Prop>() != null)
         {
             currentNode.GetComponent<Prop>().loc.Arrive();
@@ -71,8 +84,46 @@ public class GameManager : MonoBehaviour
             CreateContentView(text);
         }
 
-        // Display all the choices, if there are any!
-        if (story.currentChoices.Count > 0)
+        // Get the current tags (if any)
+        List<string> tags = story.currentTags;
+
+        // If there are tags, search for lighting and location instructions.
+        if (tags.Count > 0)
+        {
+            if (tags.Contains("lit"))
+            {
+
+                brightness = lt.intensity;
+
+                inLights = GameObject.FindGameObjectsWithTag("InnerLight");
+                if (tags.Contains("normal"))
+                {
+                    brightness = normalLight;
+                }
+                if (tags.Contains("dark"))
+                {
+                    brightness = lowLight;
+                }
+                if (tags.Contains("bright"))
+                {
+                    brightness = highLight;
+                }
+                
+
+                foreach (GameObject inLight in inLights)
+                {
+                    lt = inLight.GetComponent<Light>();
+                    
+                    //DOTween sequence to slow light change
+                    lt.DOIntensity(brightness, .75f);
+                    //lt.intensity = DOTween.brightness;
+                }
+
+            }
+        }
+
+            // Display all the choices, if there are any!
+            if (story.currentChoices.Count > 0)
         {
             for (int i = 0; i < story.currentChoices.Count; i++)
             {

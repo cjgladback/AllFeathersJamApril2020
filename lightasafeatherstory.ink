@@ -1,3 +1,9 @@
+//tags list:
+//#lit #normal #bright #dark
+//#reloc #deskloc #bedloc #dresserloc #neighborloc #doorloc
+//#time #neighborwake #microbe #lose #win
+//#robot
+
 -> wake_up
 === wake_up ===
 You in there?
@@ -32,15 +38,15 @@ Do you think it's serious?
 + [Wish I knew.]->intro_inthedark
 = intro_inthedark
 Wait, are we completely in the dark here?
-+ [...]->intro_notdark #litbright
++ [...]->intro_notdark #lit #bright
 = intro_notdark
 Yeah, yeah, cut it out.
-+ [...]->chooseport #litnormal
++ [...]->chooseport #lit #normal
 = chooseport
 {I mean, do you think you can patch into the net directly? Maybe there's been a bulletin or an estimated resolution time. Something.|Maybe one of the other ports.|What about that one?}
-+ {not intro_outer} [Port by outer door.]->intro_outer
-+ {not intro_neighbor} [Port toward neighbor suite.]->intro_neighbor
-+ [Port by inner door.]->intro_inner
++ {not intro_outer} [Port by outer door.]->intro_outer #reloc #doorloc
++ {not intro_neighbor} [Port toward neighbor suite.]->intro_neighbor #reloc #neighborloc
++ [Port by inner door.]->intro_inner #reloc #dresserloc
 = intro_outer
 What's the word?
 + [Exiting suite is not permitted until the microbe scan has successfully completed.]->microbescan

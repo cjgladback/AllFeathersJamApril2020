@@ -32,7 +32,7 @@ To do:
   - door (x4 or more)
   - curtains (animated to mirror? x2)
 - Interactive lights
-  - Light level and color manager (on, high, off, ominous)
+  - ~~Light level and color manager (on, high, off, ominous)~~
   - Neighbor light manager included?
 - Textures
 - Menu/settings?
