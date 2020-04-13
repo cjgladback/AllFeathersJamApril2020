@@ -2,10 +2,12 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor-firstpass.dll:
     - Ink.UnityIntegration.InkLibrary
+    - Ink.UnityIntegration.InkSettings
     Assembly-CSharp.dll:
     - CameraRig
     - GameManager
     - Location
+    - Prop
     - Waypoint
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -125,6 +127,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12422}
     - Class: 114
+      Script: {instanceID: 12426}
+    - Class: 114
       Script: {instanceID: 12468}
     - Class: 114
       Script: {instanceID: 12546}
@@ -181,6 +185,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15380}
     - Class: 114
+      Script: {instanceID: 15404}
+    - Class: 114
       Script: {instanceID: 15410}
     - Class: 114
       Script: {instanceID: 15438}
@@ -199,8 +205,6 @@ ScriptsOnlyBuild:
     - Class: 137
       Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
@@ -1202,4 +1206,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/PointandClickStart.unity
-  playerPath: C:/Users/CJ/Documents/GitHub/AllFeathersJamApril2020/Light as a Feather/builds
+  playerPath: C:/Users/CJ/Documents/Saved Games/Game builds to save GitHub/builds
